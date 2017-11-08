@@ -1,0 +1,22 @@
+.footer
+  border-top: 2px solid $bluelight
+  &__container
+    +container()
+  &__menu
+    padding: 30px
+    @media #{$_sm}
+      width: 100%
+      display: flex
+      justify-content: center
+    a
+      padding: 30px 20px
+      text-transform: uppercase
+      &:hover
+        color: #dfdfdf
+  &__copy
+    @media #{$_sm}
+      width: 100%
+      display: flex
+      justify-content: center
+    p
+      padding: 30px

@@ -1,0 +1,8 @@
+mixin services(data)
+  +b.SECTION.services
+    +e.DIV.container
+      each item in data.items
+        +e.DIV.item
+          img(src=item.img)
+          span=item.title
+          p=item.content

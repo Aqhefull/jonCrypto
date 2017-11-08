@@ -1,0 +1,12 @@
+mixin nav(data)
+  +b.NAV.navigation
+    +e.DIV.container
+      +e.DIV.logo
+        img(src="./img/nav/logo.svg")
+      +e.DIV.converter
+        p 1 BTC = 32,097.23 ¥ <span>-0.14%</span>
+      +e.A.link(href='javascript:void(0);' id='navbar__icon' style='font-size:15px;' onclick='navMenu()')= '☰'
+      +e.DIV.items#navigationItems
+        each item in data.items
+          +e.DIV.items_link
+            a(href=item.href)=item.title    

@@ -1,0 +1,52 @@
+.widgets
+  min-height: 500px
+  height: 100%
+  &__container
+    +container()
+    padding: 100px 30px
+    min-height: 500px
+    @media #{$_sm}
+      flex-direction: column
+  h3
+    padding: 0 0 50px 0
+  &__traslations
+    +col(7)
+    @media #{$_sm}
+      width: 100%
+    color: #9fa3a3
+    table
+      @media #{$_sm}
+        display: block
+        width: 100%
+      tr
+        @media #{$_sm}
+          display: block
+          width: 100%
+      td
+        padding: 20px
+        border: 2px solid $bluelight
+        font-size: 14px
+        transition: all 0.3s
+        cursor: pointer
+        &:hover
+          background-color: rgba(255,255,255,0.1)
+        @media #{$_sm}
+          display: block
+          width: 100%
+        &:first-child
+          span
+            color: #7da3d7
+        &:last-child
+          span
+            color: #5bb786
+  &__news
+    +col(5)
+    @media #{$_sm}
+      width: 100%
+      margin: 50px 0
+    &-items
+      color: #9fa3a3
+      font-size: 14px
+      span
+        color: #fff
+        font-weight: 700

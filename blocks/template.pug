@@ -1,0 +1,66 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include head/head
+include nav/nav
+include header/header
+include reliability/reliability
+include services/services
+include conditions/conditions
+include growth/growth
+include widgets/widgets
+include contact/contact
+include afterfooter/afterfooter
+include footer/footer
+
+
+doctype html
+html(lang="ru")
+	
+	block head
+		head
+			+head({
+				"title": "Crypto PSD",
+				"author": "Alexandr Komarevich",
+				"description": "Crypto PSD"
+			})
+			
+		+b.BODY.page
+			+e.DIV.wrap
+				block nav
+					+nav({
+				    "items": [
+				      {
+				        "title": "About",
+				        "href": "#"
+				      },
+				      {
+				        "title": "Help",
+				        "href": "#"
+				      },
+				      {
+				        "title": "Sign up",
+				        "href": "#"
+				      },
+				      {
+				        "title": "Sign in",
+				        "href": "#"
+				      }
+				    ]
+				  })
+				block header
+					+header()
+				block content
+					div content
+				block footer
+					+footer()
+				
+			block vendors
+				// build:js js/vendor.js
+				script( src="libs/jquery/dist/jquery.min.js")
+				script( src="libs/wow/dist/wow.min.js")
+				// endbuild
+			block scripts
+				// build:js js/main.js
+				script( src="js/main.js")
+				// endbuild

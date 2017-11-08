@@ -1,0 +1,37 @@
+.services
+  height: 100%
+  border-top: 2px solid $bluelight
+  border-bottom: 2px solid $bluelight
+  &__container
+    +container()
+    padding: 100px 30px
+    min-height: 500px
+    @media #{$_sm}
+      flex-direction: column
+  &__item
+    +col(4)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-direction: column
+    text-align: center
+    transition: all 0.3s
+    cursor: pointer
+    &:hover
+      background-color: rgba(255,255,255,0.1)
+    @media #{$_sm}
+      width: 100%
+    img
+      display: block
+      margin: 30px
+    span
+      font-weight: 700
+      letter-spacing: 1px
+      text-transform: uppercase
+    p
+      font-size: 14px
+      line-height: 1.5
+      color: #96a7b4
+      padding: 0 30px 30px 30px
+      @media #{$_sm}
+        padding: 30px
